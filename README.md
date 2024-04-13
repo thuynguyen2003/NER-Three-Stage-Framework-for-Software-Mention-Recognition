@@ -18,8 +18,12 @@ Folder "data" contains the original data of the organization (subtask1_train.dat
 Folder "src_code" contains all source code in jupyter notebook file of our approaches. Note that we save the trained model on Hugging Face so you need to have an Hugging Face account to follow our source code or change some line of code to save trainned model at local
 # 3. Approach
 To address the Software Mention Recognition task, we utilize the power of different pre-trained transformer-based language model in. Figure 1 illustrates three approaches to solve this task. In our expriment, we employ various pre-trained language models, including the XLM-Roberta (XLMR) [4], BERT [7], and SciBERT [2] as our main backbones. 
+
+**Imgage: Overview system of three approaches: Sample input is ”Celeste was written in C #” with two entities are E 1 and E 2. E 1 and E 2 play the role of two entity types in this example**
+![plot](./stage1_2_3.png)
 ## 3.1. Approach 1: Token classification with pre-trained language models
 In this approach, we tackled the problem by fine-tuning transformer models for the token classification task. In total, there are 27 labels, where 26 labels correspond to 13 types of entities and 1 label represents non-entity.
+
 **Table 1: List of labels for token classification task in Approach 1**
 | Index | Label                     | Index | Label                            |
 |:-----:|---------------------------|:-----:|----------------------------------|
@@ -70,6 +74,7 @@ We conduct all experiments on three approaches, using three base-version backbon
  # 5. Main result
 According to the organizing committee, this sub-task will be evaluated by F1-Score based on exact matches. In table 1 we provide a tabulated summary of 9  experiments, each representing one of the 9 final systems generated from three  different approaches and using three distinct backbones.  
 The experimental results in table 1 indicate that Approach 3, a three-stage  system, emonstrates the best performance across all backbones, with the XLM-RoBERTa backbone exhibiting the highest efficacy among all approaches.
+
 **Table 1: Comparative performance of our three Approaches with different pre-trained language models on the test set**
 |             |           | Approach 1 |          |           | Approach 2 |          |           | Approach 3 |          |
 |-------------|:---------:|:----------:|:--------:|:---------:|:----------:|:--------:|:---------:|:----------:|:--------:|
